@@ -415,7 +415,6 @@ label{
     border: none;
     border-radius: 0.4rem;
     background-color: #9d4edd;
-    cursor: pointer;    
 }
 
 #register .register-container .form form #submit:hover {
