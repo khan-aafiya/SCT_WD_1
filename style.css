@@ -7,7 +7,8 @@
     font-family: 'Poppins', sans-serif;
 }
 
-body {
+body,
+html {
     font-size: 16px;
     line-height: 1.6;
     color: black;
@@ -133,7 +134,7 @@ body {
 
 section {
     width: 100vw;
-    min-height: 100vh;
+    /* height: 100vh; */
     padding: 5rem 9% 5rem;
     display: flex;
 }
@@ -204,6 +205,10 @@ section {
     margin: 5rem 0 0 0;
 }
 
+#about {
+    height: max-content;
+}
+
 #about .about-container {
     width: 100%;
     /* height: 10; */
@@ -251,12 +256,12 @@ section {
 #about .about-container .img .img-container .img-photo {
     width: 100%;
     height: 100%;
-    /* height: 30rem; */
     object-fit: cover;
     border-radius: 0 0 0.7rem 0.7rem;
 }
 
 #services {
+    height: max-content;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -342,6 +347,7 @@ section {
     justify-content: center;
     align-items: center;
     padding: 10rem 9% 5rem;
+    height: max-content;
 }
 
 #register .register-container {
@@ -438,6 +444,7 @@ label {
     align-items: center;
     text-align: center;
     padding: 10rem 9% 5rem;
+    height: max-content;
 }
 
 #contact h2 {
@@ -585,13 +592,14 @@ label {
     }
 }
 
-@media (max-width: 1020px) {
+@media (max-width: 1025px) {
 
     #about .about-container {
         flex-direction: column;
     }
 
     #about .about-container .info {
+        margin-top: 0;
         width: 100%;
         height: 50%;
     }
@@ -601,9 +609,10 @@ label {
     }
 
     #about .about-container .info .btn-search {
-        font-size: 0.7rem;
+        width: 20%;
+        font-size: 1rem;
         margin-top: 2rem;
-        padding: 0.9rem 1.5rem;
+        padding: 0.9rem 1rem;
     }
 
     #about .about-container .img .img-container {
@@ -654,6 +663,10 @@ label {
         font-size: 2rem;
     }
 
+    #register .register-container .form form #submit {
+        width: 32%;
+    }
+
     #contact .content .items .name {
         font-size: 1rem;
     }
@@ -692,7 +705,9 @@ label {
     }
 
     #home {
-        height: 80vh;
+        height: max-content;
+        margin-top: 2%;
+        padding: 5rem 2rem 1rem;
     }
 
     #home .home-container h1 {
@@ -710,13 +725,17 @@ label {
     }
 
     #home .home-container .btn-container .play-info {
-        width: 20%;
+        width: 10%;
         font-size: 0.7rem;
     }
 
     #home .home-container .photo-container .photo {
         width: 7rem;
         height: 13rem;
+    }
+
+    #about {
+        padding: 2rem 9% 2rem;
     }
 
     #about .about-container {
@@ -726,6 +745,7 @@ label {
     #about .about-container .info {
         width: 100%;
         height: 50%;
+        margin-top: 0;
     }
 
     #about .about-container .info h2 {
@@ -733,19 +753,22 @@ label {
     }
 
     #about .about-container .info .btn-search {
-        font-size: 0.7rem;
-        margin-top: 2rem;
-        padding: 0.9rem 1.5rem;
+        width: 40%;
     }
 
+    #about .about-container .img,
     #about .about-container .img .img-container {
-        height: 30rem;
         width: 100%;
+        height: 90%;
     }
 
     #about .about-container .img .img-container .img-photo {
-        height: 30rem;
-        width: 50rem;
+        height: 100%;
+        width: 100%;
+    }
+
+    #contact {
+        padding: 2rem 9% 2rem;
     }
 
     #contact .content {
@@ -766,14 +789,13 @@ label {
     }
 
     #register {
-        height: 90vh;
-        padding: 0 9% 5rem;
+        padding: 2rem 9% 2rem;
     }
 
     #register .register-container {
         width: 100%;
         flex-direction: column;
-        gap: 5rem;
+        gap: 1rem;
     }
 
     #register .register-container .form {
@@ -805,7 +827,7 @@ label {
     }
 
     #register .register-container .form form #submit {
-        width: 30%;
+        width: 20%;
         padding: 0.5rem;
         font-size: 1rem;
         color: white;
@@ -816,8 +838,13 @@ label {
 }
 
 @media (max-width: 500px) {
+    .menu-btn {
+        font-size: 1.5rem;
+    }
+
     .nav {
-        padding: 0 0.7rem;
+        width: 100%;
+        padding: 0.5rem 0.7rem;
     }
 
     .nav .title {
@@ -838,13 +865,9 @@ label {
         padding: 0.5rem 1.5rem;
     }
 
-    section {
-        width: 120vw;
-    }
-
-
     #home {
-        height: 90vh;
+        margin-top: 10%;
+        padding: 2rem 9% 2rem;
     }
 
     #home .home-container h1 {
@@ -874,8 +897,16 @@ label {
     }
 
     #home .home-container .btn-container .play-info {
-        width: 30%;
+        width: 25%;
         font-size: 0.7rem;
+    }
+
+    #about {
+        padding: 2rem 9% 2rem;
+    }
+
+    #about .about-container .info {
+        margin: 0;
     }
 
     #about .about-container .info h2 {
@@ -894,8 +925,48 @@ label {
         padding: 0.8rem 1.6rem;
     }
 
+    #about .about-container .img,
+    #about .about-container .img .img-container {
+        width: 100%;
+        height: 20rem;
+    }
+
+    #about .about-container .img .img-container .img-photo {
+        height: 100%;
+        width: 100%;
+    }
+
+    #services {
+        padding: 2rem 9% 2rem;
+    }
+
     #services h2 {
         font-size: 1.5rem;
         width: 80%;
+    }
+
+    #services .info-boxes .box {
+        width: 100%;
+    }
+
+    #services .info-boxes .box h3,
+    #services .info-boxes .box a {
+        font-size: 1.2rem;
+    }
+
+    #services .info-boxes .box p {
+        font-size: 1rem;
+    }
+
+    #register .register-container .form form .inputs {
+        width: 100%;
+    }
+
+    #register .register-container .form form #submit {
+        width: 35%;
+    }
+
+    #contact h2 {
+        font-size: 3rem;
     }
 }
